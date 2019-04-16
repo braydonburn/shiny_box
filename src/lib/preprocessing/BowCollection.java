@@ -31,6 +31,14 @@ public class BowCollection extends LinkedHashMap<Integer,BowDocument> {
 		parseCollection(stopwordEnabled);
 	}
 	
+	/**
+	 * Use this when stop words and not passed to the method.
+	 * @param dir directory of the data set.
+	 */
+	public BowCollection(String dir) {
+		this(dir, true, true);
+	}
+	
 
 	/**
 	 * Loads the files that stored the related documents into the bag of words collection. 
