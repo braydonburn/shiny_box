@@ -1,0 +1,5 @@
+The number of relevant documents = 16
+The number of retrieved relevant documents = 11
+recall = 0.687500
+precision = 0.785714
+F-Measure = 0.733333

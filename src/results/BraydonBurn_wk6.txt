@@ -1,0 +1,12 @@
+Document 741299 has a document length of 195.
+Document 741309 has a document length of 104.
+Document 780718 has a document length of 105.
+Document 780723 has a document length of 124.
+Document 783802 has a document length of 118.
+Document 783803 has a document length of 483.
+Document 807600 has a document length of 530.
+Document 807606 has a document length of 183.
+Document 809481 has a document length of 151.
+Document 809495 has a document length of 691.
+
+These 10 documents have an average document length of 268.

@@ -1,10 +1,13 @@
 package week7;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Map.Entry;
 
 import config.AppConfig;
 import lib.evaluation.RankingMap;
+import lib.preprocessing.OutputToFile;
 
 /**
  * Read two top-10 ranking result files (e.g., rank1.txt, and rank2.txt), 
@@ -12,9 +15,14 @@ import lib.evaluation.RankingMap;
  */
 public class Week7Task2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		File rankfile1 = new File(AppConfig.DEFAULT_RESOURCE_DIR + "//evaluation//rank1.txt");
 		File rankfile2 = new File(AppConfig.DEFAULT_RESOURCE_DIR + "//evaluation//rank2.txt");
+		
+    	// Outputs console information to specified file, if it doesn't exist create new file
+    	FileOutputStream file = new FileOutputStream("src/results/BraydonBurn_wk7_2.txt", false);
+    	OutputToFile tee = new OutputToFile(file, System.out);
+    	System.setOut(tee);
 
 		System.out.println("Calculate ranking effectiveness of rank1.txt:");
 		showRankingEffectiveness(rankfile1);

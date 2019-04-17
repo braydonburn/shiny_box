@@ -1,9 +1,12 @@
 package week7;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 import config.AppConfig;
 import lib.evaluation.Evaluator;
+import lib.preprocessing.OutputToFile;
 
 /**
  * Read a topic-doc-assignments file (e.g., topicdocassign.txt, the benchmark) and
@@ -14,10 +17,15 @@ public class Week7Task1 {
 	
 	public static final String TOPIC = "R105";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		File benchmark = new File(AppConfig.DEFAULT_RESOURCE_DIR + "evaluation//topicdocassign.txt");
 		File irOutput = new File(AppConfig.DEFAULT_RESOURCE_DIR
 								+ "evaluation//topicdocassigntest.txt");
+		
+    	// Outputs console information to specified file, if it doesn't exist create new file
+    	FileOutputStream file = new FileOutputStream("src/results/BraydonBurn_wk7.txt", false);
+    	OutputToFile tee = new OutputToFile(file, System.out);
+    	System.setOut(tee);
 		
 		try {
 			/**

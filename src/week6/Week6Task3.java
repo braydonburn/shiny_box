@@ -1,5 +1,7 @@
 package week6;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -12,18 +14,24 @@ import config.AppConfig;
 import lib.preprocessing.BM25;
 import lib.preprocessing.BowCollection;
 import lib.preprocessing.BowDocument;
+import lib.preprocessing.OutputToFile;
 
 public class Week6Task3 {
 	
 	private final static int NO_OF_TOP_RESULTS = 3;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		String[] queries = {"British fashion",
 						  "fashion awards",
 						  "Stock market",
 						  "British Fashion Awards",
 						  "Car failure"
 						  };
+		
+    	// Outputs console information to specified file, if it doesn't exist create new file
+    	FileOutputStream file = new FileOutputStream("src/results/BraydonBurn_wk6_3.txt", false);
+    	OutputToFile tee = new OutputToFile(file, System.out);
+    	System.setOut(tee);
 		
 		
 		BowCollection bowCollection = new BowCollection(AppConfig.DEFAULT_DATASET_DIR);

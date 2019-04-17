@@ -1,9 +1,13 @@
 package week6;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
 import config.AppConfig;
 import lib.preprocessing.BM25;
 import lib.preprocessing.BowCollection;
 import lib.preprocessing.BowDocument;
+import lib.preprocessing.OutputToFile;
 
 /**
  * Create a method to calculate a given document's BM25 score for a given query.
@@ -16,7 +20,12 @@ public class Week6Task2 {
 	
 	private static String query;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
+    	// Outputs console information to specified file, if it doesn't exist create new file
+    	FileOutputStream file = new FileOutputStream("src/results/BraydonBurn_wk6_2.txt", false);
+    	OutputToFile tee = new OutputToFile(file, System.out);
+    	System.setOut(tee);
+		
 		if (args.length > 0) {
 			query = args[1];
 		} else {

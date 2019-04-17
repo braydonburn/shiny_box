@@ -1,0 +1,30 @@
+Calculate ranking effectiveness of rank1.txt:
+At position  1, precision=1.000000 recall=0.125000
+At position  2, precision=1.000000 recall=0.250000
+At position  3, precision=1.000000 recall=0.375000
+At position  4, precision=1.000000 recall=0.500000
+At position  5, precision=1.000000 recall=0.625000
+At position  6, precision=0.833333 recall=0.625000
+At position  7, precision=0.857143 recall=0.750000
+At position  8, precision=0.875000 recall=0.875000
+At position  9, precision=0.777778 recall=0.875000
+At position 10, precision=0.800000 recall=1.000000
+
+In top-10, average precision = 0.941518
+
+
+Calculate ranking effectiveness of rank2.txt:
+At position  1, precision=0.000000 recall=0.000000
+At position  2, precision=0.500000 recall=0.142857
+At position  3, precision=0.666667 recall=0.285714
+At position  4, precision=0.750000 recall=0.428571
+At position  5, precision=0.800000 recall=0.571429
+At position  6, precision=0.833333 recall=0.714286
+At position  7, precision=0.714286 recall=0.714286
+At position  8, precision=0.750000 recall=0.857143
+At position  9, precision=0.666667 recall=0.857143
+At position 10, precision=0.700000 recall=1.000000
+
+In top-10, average precision = 0.714286
+
+

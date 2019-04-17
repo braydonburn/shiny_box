@@ -1,11 +1,14 @@
 package week5;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
 import config.AppConfig;
 import lib.preprocessing.BowCollection;
 import lib.preprocessing.BowDocument;
+import lib.preprocessing.OutputToFile;
 import lib.preprocessing.TfIdf;
 
 /**
@@ -18,8 +21,13 @@ import lib.preprocessing.TfIdf;
  */
 public class Week5Task2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		BowCollection bowCollection = new BowCollection(AppConfig.DEFAULT_DATASET_DIR);
+		
+    	// Outputs console information to specified file, if it doesn't exist create new file
+    	FileOutputStream file = new FileOutputStream("src/results/BraydonBurn_wk5_2.txt", false);
+    	OutputToFile tee = new OutputToFile(file, System.out);
+    	System.setOut(tee);
 		
 		TfIdf result = new TfIdf(bowCollection);
 		for(Entry<Integer, BowDocument> doc : bowCollection.entrySet()) {

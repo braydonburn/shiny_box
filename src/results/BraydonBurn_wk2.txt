@@ -1,0 +1,10 @@
+Document with itemid = 741299 contains 195 words.
+Document with itemid = 741309 contains 104 words.
+Document with itemid = 780718 contains 105 words.
+Document with itemid = 780723 contains 124 words.
+Document with itemid = 783802 contains 118 words.
+Document with itemid = 783803 contains 483 words.
+Document with itemid = 807600 contains 530 words.
+Document with itemid = 807606 contains 183 words.
+Document with itemid = 809481 contains 151 words.
+Document with itemid = 809495 contains 691 words.

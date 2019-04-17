@@ -1,0 +1,12 @@
+Average document length 268 for query: stock market
+
+Document: 741299, Length: 195 and BM25 score: 0.000000
+Document: 741309, Length: 104 and BM25 score: 0.000000
+Document: 780718, Length: 105 and BM25 score: 0.000000
+Document: 780723, Length: 124 and BM25 score: 1.705827
+Document: 783802, Length: 118 and BM25 score: 0.000000
+Document: 783803, Length: 483 and BM25 score: 0.493087
+Document: 807600, Length: 530 and BM25 score: 1.365798
+Document: 807606, Length: 183 and BM25 score: 1.298321
+Document: 809481, Length: 151 and BM25 score: 0.000000
+Document: 809495, Length: 691 and BM25 score: 0.000000
